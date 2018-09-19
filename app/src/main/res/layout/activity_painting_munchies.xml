@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_painting_munchies"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demon_munchies.paint.PaintingMunchies">
+
+    <demon_munchies.paint.PaintView
+        android:id="@+id/paintView"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Clear" />
+
+    <SeekBar
+        android:id="@+id/red"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:max="255"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <SeekBar
+        android:id="@+id/green"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/blue"
+        android:max="255" />
+
+    <SeekBar
+        android:id="@+id/blue"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/red"
+        android:max="255" />
+
+    <TextView
+        android:id="@+id/redTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/blue"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/red"
+        android:layout_toRightOf="@+id/red"
+        android:text="Red" />
+
+    <TextView
+        android:id="@+id/greenTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blue"
+        android:layout_toEndOf="@+id/green"
+        android:layout_toRightOf="@+id/green"
+        android:text="Green" />
+
+    <TextView
+        android:id="@+id/blueTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/redTxt"
+        android:layout_toEndOf="@+id/red"
+        android:layout_toRightOf="@+id/red"
+        android:text="Blue" />
+
+    <Button
+        android:id="@+id/saveJPEG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/paintView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Save JPEG" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/clear"
+        android:layout_toStartOf="@+id/clear"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/savePNG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/saveJPEG"
+        android:layout_toLeftOf="@+id/saveJPEG"
+        android:layout_toStartOf="@+id/saveJPEG"
+        android:text="Save PNG" />
+
+</RelativeLayout>
